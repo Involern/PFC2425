@@ -1,8 +1,11 @@
-string = "This is a string"
-integer = 24
-decimal = 3.2123
-trueorfalse = True
+import time
+t = time
 
-string = bool(string)
-
-print(string)
+while True:
+    USER = input("Please enter your Username: ")
+    if bool(USER):
+        print(f"Great! Your name is {USER}")
+        break
+    else:
+        print("Invalid")
+        t.sleep(0.5)
