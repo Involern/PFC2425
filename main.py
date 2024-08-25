@@ -1,15 +1,15 @@
-# Python weight coverter
+# Python temperature converter
 
-weight = float(input("Enter your weight: "))
-unit = input("Kilos or pounds? (K or L): ")
+unit = input("Is this temp. in Celsius or Fahrenheit (C/F): ")
+temp = float(input("Enter the temperature: "))
 
-if unit == "K":
-    weight = weight * 2.205
-    unit = "Lbs."
-    print(f"Your weight is {round(weight, 1)} {unit}")
-elif unit == "L":
-    weight = weight / 2.205
-    unit = "Kgs."
-    print(f"Your weight is {round(weight, 1)} {unit}")
+if unit == "C":
+    temp = round((9 * temp / 5 + 32), 1)
+    unit = 'Fahrenheit'
+    print(f"The temperature in {unit} is: {temp}°F")
+elif unit == "F":
+    temp = round((temp - 32) * 5 / 9, 1)
+    unit = 'Celsius'
+    print(f"The temperature in {unit} is: {temp}°C")
 else:
-    print(f"{unit} was not valid")
+    print(f"{unit} is invalid unit of measurement")
