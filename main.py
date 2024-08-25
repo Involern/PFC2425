@@ -1,15 +1,23 @@
-# Python temperature converter
+# logical operators in Python
 
-unit = input("Is this temp. in Celsius or Fahrenheit (C/F): ")
-temp = float(input("Enter the temperature: "))
+temp = 20
+is_sunny = False
 
-if unit == "C":
-    temp = round((9 * temp / 5 + 32), 1)
-    unit = 'Fahrenheit'
-    print(f"The temperature in {unit} is: {temp}°F")
-elif unit == "F":
-    temp = round((temp - 32) * 5 / 9, 1)
-    unit = 'Celsius'
-    print(f"The temperature in {unit} is: {temp}°C")
-else:
-    print(f"{unit} is invalid unit of measurement")
+if temp >= 28 and is_sunny:
+    print("It is HOT outside")
+    print("It is SUNNY")
+elif temp <= 0 and is_sunny:
+    print("It is COLD outside")
+    print("It is SUNNY")
+elif 28 > temp > 0 and is_sunny:
+    print("It is WARM outside")
+    print("It is SUNNY")
+elif temp >= 28 and not is_sunny:
+    print("It is HOT outside")
+    print("It is CLOUDY")
+elif temp <= 0 and not is_sunny:
+    print("It is COLD outside")
+    print("It is CLOUDY")
+elif 28 > temp > 0 and not is_sunny:
+    print("It is WARM outside")
+    print("It is CLOUDY")
