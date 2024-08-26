@@ -1,15 +1,11 @@
-# indexing
+# format specifiers
 
-credit_number = "1234-5812-2112-3211"
+price1 = 3000.14159
+price2 = -9870.65
+price3 = 1200.34
 
-# print(credit_number[4])
-# print(credit_number[:4])
-# print(credit_number[5:9])
-# print(credit_number[5:])
-# print(credit_number[-4])
-# print(credit_number[::2])
-# last_digits = credit_number[-4:]
+print(f"Price 1 is ${price1:+,.2f}")
+print(f"Price 2 is ${price2:+,.2f}")
+print(f"Price 3 is ${price3:+,.2f}")
 
-credit_number = credit_number[::-1]
-print(credit_number)
-# print(f"XXXX-XXXX-XXXX-{last_digits}")
+# -$9,000 or $-9,000
