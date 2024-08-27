@@ -1,8 +1,7 @@
-file_path = 'save.dat'
+# collection
 
-with open(file_path, 'r') as file:
-    data = file.readlines()
+fruits = ["apple", "orange", "banana", "coconut"]
 
-data = [line.strip() for line in data]
 
-print(data[4])
+for x in 
+print(fruits[4])
