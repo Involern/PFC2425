@@ -1,24 +1,17 @@
 # Collection
+# Set: Unordered and immutable, but Add/Remove OK. NO duplicates unlike lists.
 
-fruits = ['apple', 'orange', 'banana', 'coconut']
 
-# print(fruit[::-1])
+fruits = {'apple', 'orange', 'banana', 'coconut', 'coconut'}
+
 # print(dir(fruits))
 # print(help(fruits))
 # print(len(fruits))
-# print("Pineapple" in fruits)
-
-# fruits[1] = 'pineapple'
-# fruits.append('pineapple')
+# print('pineapples' in fruits)
+# print(fruits[0])
+# fruits.add('pineapple')
 # fruits.remove('apple')
-# fruits.insert(0, "pineapple")
-# fruits.sort() # sorts in alphabetical order
-# fruits.reverse() #reversed based on order they are placed.
-# fruits.reverse()
+# fruits.pop()
 # fruits.clear()
-# print(fruits.index("pineapple"))
-# print(fruits.count('pineapple'))
 
 print(fruits)
-# for fruit in fruits:
-#     print(fruit)
