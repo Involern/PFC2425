@@ -1,3 +1,5 @@
+import time as t
+
 # # Collection
 # # Tuples. Ordered and unchangeable. Duplicates OK. FASTER
 
@@ -25,17 +27,20 @@ multiplier_map = {
     6: 4
 }
 
-base = 2
-stage = 0
+base = 52
+stage = 8
 mult = multiplier_map.get(stage, -6 if stage <= -6 else (6 if stage >= 6 else stage))
 
-print('Too high or low stage!' if mult >= -6 or mult <= 6 else '')
+# print('Too high or low stage!' if mult >= -6 or mult <= 6 else '')
 
 def multiplierBase(baset):
     newVal = baset * (1 if stage == 0 else mult)
     print(f"base is {baset} and multiplier is {mult}")
-    if stage -5 or -4 or -1:
+    if stage in [-5, -4, -1]:
         round(newVal, 2)
     return newVal
 
 print(f'Final stat {multiplierBase(base)}')
+
+t.sleep(2)
+print('slept!')
