@@ -1,25 +1,25 @@
-# collection = single "variable" used to store multiple values
-# list: order and changeable. Duplicate ok
-# Set: unordered and immutable, but Add/Remvoe OK. No duplicates
-# Tuple: () ordered and unchangeable. Duplicates ok. Faster
+# Shopping cart program
 
-fruits = ("apple", "orange", "banana", "coconut", "apple", "apple")
+foods = []
+prices = []
+total = 0
 
-# print(dir(fruits))
-# print(help(fruits))
-# print(len(fruits))
-# print("pineapple" in fruits)
+while True:
+    food = input("Enter a food to buy (q to exit): ")
 
-# print(fruits[0]) # cannot use indexing on set because it is unordered
+    if food.lower() == "q":
+        break
+    else:
+        price = float(input(f"Enter the price of a {food}: $"))
+        foods.append(food)
+        prices.append(price)
 
-# fruits.add("pineapple")
-# fruits.remove("apple")
-# fruits.pop()
-# fruits.clear()
-# print(fruits.index("apple"))
-# print(fruits.count("apple"))
+print("----- YOUR CART -----")
 
-for fruit in fruits:
-    print(fruit)
+for food in foods:
+    print(food, end=" ")
 
-print(fruits)
+for price in prices:
+    total += price
+
+print(f"\nYour total is ${round(total, 2)}")
