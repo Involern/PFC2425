@@ -1,40 +1,34 @@
-# dictionary = a collection of {key:value} pairs
-#              ordered and changeable. No duplicates
+# Concession stand program
+# dictionary {key: value}
 
-capitals = {"USA": "Washington D.C.",
-            "India": "New Delhi",
-            "China": "Beijing",
-            "Russia": "Moscow"}
+menu = {"pizza": 3.00,
+        "nachos": 4.50,
+        "popcorn": 6.00,
+        "fries": 2.50,
+        "chips": 1.00,
+        "pretzel": 3.50,
+        "soda": 3.00,
+        "lemonade": 4.25}
+cart = []
+total = 0
 
-items = capitals.items()
-for key, value in capitals.items():
-    print(f"Key: {key}, \nValue: {value}", end=",\n\n")
+# items() method returns key and a value for a dictionary
+print("------- MENU -------")
+for key, value in menu.items():
+    print(f"{key:10}: {value:.2f}") # Used format specifier. Search if can do in lua. ":10 + :.2f"
+print("--------------------")
 
-# values = capitals.values()
-# for value in capitals.values():
-#     print(value)
+while True:
+    food = input("Select an item (q to quit): ").lower()
+    if food == "q":
+        break
+    elif menu.get(food) is not None:
+        cart.append(food)
 
+print("------- YOUR ORDER -------")
+for food in cart:
+    total += menu.get(food)
+    print(food, end=" ")
 
-# capitals.update({"Germany": "Berlin"})
-# capitals.update({"USA": "Detroit"})
-# capitals.pop("China")
-# capitals.popitem()
-# capitals.clear()
-
-# keys = capitals.keys()
-
-# for key in capitals.keys():
-#     print(key)
-
-# print(dir(capitals))
-# print(help(capitals))
-# print(capitals.get("Japan"))
-
-# while True:
-#     getCap = input("What country?: ").upper()
-#     if capitals.get(getCap):
-#         print(capitals[getCap])
-#     elif getCap.upper() == "Q":
-#         break
-#     else:
-#         print("That capital doesn't exist")
+print()
+print(f"Total is ${total:.2f}")
