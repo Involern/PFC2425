@@ -1,23 +1,4 @@
-# default argument = A default value for certain parameters
-#                   default is used when that argument is omitted
-#                   make your functions more flexible, reduces # of arguments
-#                   1. professional, 2. DEFAULT, 3. keyword, 4. arbitrary
-
-import time
-
-def count(end, start=0):
-    for x in range(start, end+1):
-        print(x)
-        time.sleep(1)
-    print("DONE")
-
-count(30, 15)
-
-
-
-# def net_price(list_price, discount=0, tax=0.05): # default values
-#     return list_price * (1 - discount) * (1 + tax)
-
-# # print(net_price(500))
-# # print(net_price(500, 0.1)) # uses what is passed in rather than the default prices
-# print(net_price(500, 0.1, 0))
+# keyword arguments = an argument preceded by an identifier
+#                     helps with readability
+#                     order of arguments doesn't matter
+#                     1. Positional 2. Default 3. KEYWORD 4. Arbitrary
