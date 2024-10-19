@@ -1,24 +1,57 @@
-# Iterables = An object/collection that can return its elements one at a time,
-#             allowing it to be iterated over in a loop
+# Membership operators = used to test whether a value or variable is found in a sequence
+#                        (string, list, tuple, set, or dictionary)
+#                        1. in
+#                        2. not in
 
-my_dictionary = {"A": 1, "B": 2, "C": 3}
+email = "spongebob@gmail.com"
 
-for key, value in my_dictionary.items():
-    print(f"{key} = {value}")
-
-
-# name = "Spongebob Squarepants"
-
-# for character in name:
-#     print(character, end=" ")
+if "@" in email and "." in email: # checking two conditions of two values that is found in the sequence "email"
+    print("Valid email")
+else:
+    print("Invalid email")
 
 
-# fruits = {"apple", "orange", "banana", "coconut"}
 
-# for fruit in reversed(fruits): # you cannot reverse sets.
-#     print(fruit)
 
-# numbers = (1, 2, 3, 4, 5)
 
-# for number in numbers: #variable should be in relation to iterable for readability
-#     print(number)
+
+# grades = {"Sandy": "A", 
+#           "Squidward": "B", 
+#           "Spongebob": "C", 
+#           "Patrick": "D"}
+
+# student = input("Enter the name of a student: ")
+
+# if student in grades:
+#     print(f"{student}'s grade is {grades[student]}")
+# else:
+#     print(f"{student} was not found")
+
+
+
+
+
+
+
+# students = {"Spongebob", "Patrick", "Sandy"}
+
+# student = input("Enter the name of a student: ")
+
+# if student not in students:
+#     print(f"{student} was not found")
+# else:
+#     print(f"{student} is a student")
+
+
+
+
+
+
+# word = "APPLE"
+
+# letter = input("Guess a letter in the secret word: ")
+
+# if letter not in word: # in checks if letters or something was found in sequence and then returns boolean
+#     print(f"There is a {letter}")
+# else:
+#     print(f"{letter} was not found")
