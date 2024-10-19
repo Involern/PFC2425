@@ -1,42 +1,24 @@
-# *args     = allows you to pass multiple non-key arguments
-# **kwargs  = allows you to pass multiple key-word arguments
-#           * unpacking operator
-#           1. positional 2. default 3. keyword 4. ARBITRARY
-# varying amount of arguments
+# Iterables = An object/collection that can return its elements one at a time,
+#             allowing it to be iterated over in a loop
 
-def shipping_label(*args, **kwargs): #order for args and kwargs MATTERS
-    for arg in args:
-        print(arg, end=" ")
-    print()
-    
-    if "apt" in kwargs:
-        print(f"{kwargs.get('street')} {kwargs.get('apt')}")
-    elif "pobox" in kwargs:
-        print(f"{kwargs.get('street')}")
-        print(f"{kwargs.get('pobox')}")
-    else:
-        print(f"{kwargs.get('state')}")
+my_dictionary = {"A": 1, "B": 2, "C": 3}
 
-shipping_label("Dr.", "Spongebob", "Squarepants", 
-               street="123 Fake St.",
-               pobox="PO box #1001",
-               city="Detroit",
-               state="MI",
-               zip="54321")
+for key, value in my_dictionary.items():
+    print(f"{key} = {value}")
 
 
-# def print_address(**kwargs):
-#     for key, value in kwargs.items():
-#         print(f"{key}: {value}")
+# name = "Spongebob Squarepants"
 
-# print_address(street="123 Fake St.",
-#               apt="100",
-#               city="Detroit", 
-#               state="MI", 
-#               zip="54321")
+# for character in name:
+#     print(character, end=" ")
 
-# def display_name(*args):
-#     for arg in args:
-#         print(arg, end=" ")
 
-# display_name("Dr", "Spongebob", "Harold", "Squarepants", "III")
+# fruits = {"apple", "orange", "banana", "coconut"}
+
+# for fruit in reversed(fruits): # you cannot reverse sets.
+#     print(fruit)
+
+# numbers = (1, 2, 3, 4, 5)
+
+# for number in numbers: #variable should be in relation to iterable for readability
+#     print(number)
