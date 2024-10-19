@@ -1,54 +1,23 @@
-# # function = A block of reusable code
-# #           place () after the function name to invoke it
+# default argument = A default value for certain parameters
+#                   default is used when that argument is omitted
+#                   make your functions more flexible, reduces # of arguments
+#                   1. professional, 2. DEFAULT, 3. keyword, 4. arbitrary
 
-def create_name(first, last):
-    first = first.capitalize()
-    last = last.capitalize()
-    return first + " " + last
+import time
 
-full_name = create_name("spongebob", "squarepants")
-print(full_name)
+def count(end, start=0):
+    for x in range(start, end+1):
+        print(x)
+        time.sleep(1)
+    print("DONE")
 
-
-
-
+count(30, 15)
 
 
-# def happy_birthday(name, age):
-#     print(f'Happy Birthday to {name}!')
-#     print(f'You are {age}!')
-#     print(f'Happy Birthday to {name}!')
-#     print()
 
-# happy_birthday("Name", 20)
-# happy_birthday("Joe", 45)
-# happy_birthday("Sarah", 425)
+# def net_price(list_price, discount=0, tax=0.05): # default values
+#     return list_price * (1 - discount) * (1 + tax)
 
-# def display_invoice(username, amount, due_date):
-#     print(f"Hello {username}")
-#     print(f"Your bill of ${amount:.2f} is due: {due_date}")
-
-# display_invoice("Username", 24.123219, "01/01")
-# print()
-# display_invoice("2guy", 101.0111111111, "01/23")
-
-# def add(x, y):
-#     z = x + y
-#     return z
-
-# def sub(x, y):
-#     z = x - y
-#     return z
-
-# def multiply(x, y):
-#     z = x * y
-#     return z
-
-# def divide(x, y):
-#     z = x / y
-#     return z
-
-# print(add(1, 2))
-# print(sub(1, 2))
-# print(multiply(1, 2))
-# print(divide(1, 2))
+# # print(net_price(500))
+# # print(net_price(500, 0.1)) # uses what is passed in rather than the default prices
+# print(net_price(500, 0.1, 0))
