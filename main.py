@@ -1,37 +1,32 @@
-# Match-case statement (switch): An alternative to using many 'elif' statements
-#                                Execute some code if a value matches a 'case'
-#                                Benefits: cleaner and syntax is more readable
+# module = a file containing code you want to include in your program
+#          use 'import' to include a module (built-in or your own)
+#          useful to break up a large program reusable seperate files
 
-#match-case variant:
+# import math
+# import math as m # as assigns an alias to reduce typing if you have a long module name.
+# from math import pi
+# from math import e #no longer need to use "math". Might result in name conflicts, so use sparingly.
 
-def is_weeekend(day):
-    match day:
-        case "Saturday" | "Sunday":
-            return True
-        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
-            return False
-        case _: #instead if "else", use case _ which is the wild card.
-            return False
+# import sys
+# import os
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'EXTRA'))
 
-print(is_weeekend("Pizza"))
+import example as e
+
+result = e.pi
+result = e.square(3)
+result = e.cube(3)
+result = e.circumference(3)
+result = e.area(3)
+
+print(result)
 
 
-# def day_of_week(day):
-#     if day == 1:
-#         return "It is Sunday"
-#     elif day == 2:
-#         return "It is Monday"
-#     elif day == 3:
-#         return "It is Tuesday"
-#     elif day == 4:
-#         return "It is Wednesday"
-#     elif day == 5:
-#         return "It is Thursday"
-#     elif day == 6:
-#         return "It is Friday"
-#     elif day == 7:
-#         return "It is Saturday"
-#     else:
-#         return "Not a valid day"
-    
-# print(day_of_week(1))
+
+# a, b, c, d, e = 1, 2, 3, 4, 5 # this makes "e" from the math import no longer be used.
+# # always uses second instance of "e"
+
+# print(e ** a)
+# print(e ** b)
+# print(e ** c)
+# print(e ** e)
