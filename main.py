@@ -1,32 +1,22 @@
-# module = a file containing code you want to include in your program
-#          use 'import' to include a module (built-in or your own)
-#          useful to break up a large program reusable seperate files
+# variable scope = where a variable is visible and accesible
+# scope resolution = (LEGB) Local -> Enclosed -> Global -> Built-in
 
-# import math
-# import math as m # as assigns an alias to reduce typing if you have a long module name.
-# from math import pi
-# from math import e #no longer need to use "math". Might result in name conflicts, so use sparingly.
+from math import e # built in version of e via math module
 
-# import sys
-# import os
-# sys.path.append(os.path.join(os.path.dirname(__file__), 'EXTRA'))
+def func1():
+    print(e)
 
-import example as e
+# e = 3 # global version of e
 
-result = e.pi
-result = e.square(3)
-result = e.cube(3)
-result = e.circumference(3)
-result = e.area(3)
+func1()
 
-print(result)
+# def func1():
+#     print(x)
 
+# def func2():
+#     print(x)
 
+# x = 3
 
-# a, b, c, d, e = 1, 2, 3, 4, 5 # this makes "e" from the math import no longer be used.
-# # always uses second instance of "e"
-
-# print(e ** a)
-# print(e ** b)
-# print(e ** c)
-# print(e ** e)
+# func1()
+# func2()
