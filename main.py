@@ -1,57 +1,34 @@
-# Membership operators = used to test whether a value or variable is found in a sequence
-#                        (string, list, tuple, set, or dictionary)
-#                        1. in
-#                        2. not in
+# List comprehension = A concise way to create lists in Python
+#                      Compact and easier to read than traditional loops
+#                      [expression for value in iterable if condition]
 
-email = "spongebob@gmail.com"
+grades = [85, 42, 79, 90, 56, 61, 30]
+passing_grades = [grade for grade in grades if grade >= 60]
 
-if "@" in email and "." in email: # checking two conditions of two values that is found in the sequence "email"
-    print("Valid email")
-else:
-    print("Invalid email")
+print(passing_grades)
 
 
+# numbers = [-1, -2, 3, -4, 5, -6, 8, -7]
+# positive_nums = [num for num in numbers if num >= 0] # returns num if number is less than 0
+# negative_nums = [num for num in numbers if num < 0]
+# even_nums = [num for num in numbers if num % 2 == 0]
+# odd_nums = [num for num in numbers if num % 2 == 1]
+
+# print(odd_nums)
 
 
+# fruits = [fruit.upper() for fruit in ["apple", "orange", "banana", "coconut"]]
+# fruit_chars = [fruit[0] for fruit in fruits]
+# print(fruit_chars)
 
+# doubles = [x * 2 for x in range(1, 11)]
+# triples = [y * 3 for y in range(1, 11)]
+# squares = [z * z for z in range(1, 11)]
 
-# grades = {"Sandy": "A", 
-#           "Squidward": "B", 
-#           "Spongebob": "C", 
-#           "Patrick": "D"}
+# print(squares)
 
-# student = input("Enter the name of a student: ")
+# doubles = []
+# for x in range(1, 11):
+#     doubles.append(x * 2)
 
-# if student in grades:
-#     print(f"{student}'s grade is {grades[student]}")
-# else:
-#     print(f"{student} was not found")
-
-
-
-
-
-
-
-# students = {"Spongebob", "Patrick", "Sandy"}
-
-# student = input("Enter the name of a student: ")
-
-# if student not in students:
-#     print(f"{student} was not found")
-# else:
-#     print(f"{student} is a student")
-
-
-
-
-
-
-# word = "APPLE"
-
-# letter = input("Guess a letter in the secret word: ")
-
-# if letter not in word: # in checks if letters or something was found in sequence and then returns boolean
-#     print(f"There is a {letter}")
-# else:
-#     print(f"{letter} was not found")
+# print(doubles)
